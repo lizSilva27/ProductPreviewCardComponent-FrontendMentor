@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&display=swap');
+
+:root {
+  --DarkCyan: rgb(60, 128, 103);
+  --DarkCyanButton: rgb(24, 73, 55);
+  --Cream: rgb(242, 235, 227);
+  --VeryDarkBlue: rgb(28, 35, 43);
+  --DarkGrayishBlue: rgb(108, 114, 137);
+  --White: rgb(255, 255, 255);
+
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  /* font-family: 'Fraunces', serif; */
+  font-size: 14px;
+  background-color: var(--Cream);
+  min-height: 100vh;
+  display: grid;
+  place-content: center;
+  /* font-family: 'Montserrat', sans-serif; */
+}
+
+.container {
+  background-color: var(--White);
+  width: 345px;
+  height: 620px;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.container .containerImage {
+  background-image: url(images/image-product-mobile.jpg);
+  background-size: cover;
+  width: 345px;
+  height: 235px;
+}
+
+.container .containerSection2 {
+  padding: 26px;
+}
+
+.container .containerSection2 h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 5px;
+  color: var(--DarkGrayishBlue);
+  margin-bottom: 18px;
+}
+
+.container .containerSection2 h1 {
+  font-family: 'Fraunces', serif;
+  font-size: 2.1em;
+  font-weight: 700;
+  color: var(--VeryDarkBlue);
+  margin-bottom: 20px;
+}
+
+.container .containerSection2 p {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--DarkGrayishBlue);
+  line-height: 20px;
+  margin-bottom: 26px;
+}
+
+.container .containerSection2 .containerPrice {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.container .containerSection2 .containerPrice span:nth-child(1) {
+  font-family: 'Fraunces', serif;
+  font-size: 2.2em;
+  color: var(--DarkCyan);
+  font-weight: 700;
+}
+
+.container .containerSection2 .containerPrice span:nth-child(2) {
+  font-family: 'Montserrat', sans-serif;
+  color: var(--DarkGrayishBlue);
+  font-size: 1.1em;
+  margin-left: 12px;
+  text-decoration: line-through;
+  position: absolute;
+  margin-top: 8px;
+}
+
+.container .containerSection2 button {
+  background-color: var(--DarkCyan);
+  border: none;
+  width: 100%;
+  height: 50px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: var(--White);
+}
+
+.container .containerSection2 img {
+  width: 14px;
+  height: 14px;
+  margin-right: 10px;
+}
+
+.container .containerSection2 button:hover {
+  background-color: var(--DarkCyanButton);
+}
+
+@media screen and (min-width: 900px) {
+
+  .container {
+    width: 600px;
+    height: 455px;
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .container .containerImage {
+    background-image: url(images/image-product-desktop.jpg);
+    background-size: cover;
+    width: 300px;
+    height: 455px;
+  }
+
+  .container .containerSection2 {
+    margin: 23px 3px;
+  }
+
+  .container .containerSection2 h1 {
+    font-size: 2.3em;
+  }
+}
